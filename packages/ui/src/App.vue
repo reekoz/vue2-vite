@@ -1,7 +1,3 @@
-<script setup>
-import TheWelcome from "./components/TheWelcome.vue";
-</script>
-
 <template>
   <v-app>
     <v-app-bar dark app color="secondary">
@@ -9,7 +5,7 @@ import TheWelcome from "./components/TheWelcome.vue";
     </v-app-bar>
 
     <v-main>
-      <TheWelcome />
+      <router-view />
     </v-main>
   </v-app>
 </template>

@@ -105,11 +105,15 @@ import SupportIcon from "./icons/IconSupport.vue";
 
 <script>
 import { arrayEquals } from "@vue2-vite/api/safe";
+import useCounterStore from "../stores/counter";
+import { mapState } from "pinia";
 
 export default {
   data: () => ({
-    counter: 0,
     pippo: arrayEquals([], []) ? "OK" : "NOT OK",
   }),
+  computed: {
+    ...mapState(useCounterStore, ["counter"]),
+  },
 };
 </script>
