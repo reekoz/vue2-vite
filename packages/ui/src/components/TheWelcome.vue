@@ -104,12 +104,12 @@ import SupportIcon from "./icons/IconSupport.vue";
 </template>
 
 <script>
-import pippo from "@vue2-vite/api";
+import { arrayEquals } from "@vue2-vite/api/safe";
 
 export default {
   data: () => ({
     counter: 0,
-    pippo,
+    pippo: arrayEquals([], []) ? "OK" : "NOT OK",
   }),
 };
 </script>
